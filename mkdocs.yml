@@ -1,0 +1,7 @@
+site_name: Aviation
+theme:
+  name: mkdocs
+
+nav:
+  - index.md
+  - aviation.md
