@@ -6,13 +6,12 @@ Learn the fundamentals of transform-based low-order modelling and analysis
 
 ### Dependencies
 
-The required dependencies are defined in [`requirements.txt`](requirements.txt).
-To install them inside a virtual environment using [venv](https://docs.python.org/3/library/venv.html), run:
+This repository uses [uv](https://docs.astral.sh/uv/) for comprehensive project management.
+Dependency bounds are defined in [`pyproject.toml`](pyproject.toml) and the locked environment is specified in [`uv.lock`](uv.lock).
+To create the virtual environment from the lockfile, make sure you have uv installed and run:
 
 ```
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ```
 
 ### Documentation
@@ -22,5 +21,5 @@ The source files for the site can be found in the [`docs/`](docs) directory and 
 To serve the site locally, run:
 
 ```
-mkdocs serve
+uv run mkdocs serve
 ```
