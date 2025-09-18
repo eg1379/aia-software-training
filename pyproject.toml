@@ -1,7 +1,7 @@
 [project]
 name = "aviation"
 version = "0.1.0"
-description = "A simple model of global aviation"
+description = "A simple model of global aviation."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
