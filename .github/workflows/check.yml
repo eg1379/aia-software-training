@@ -22,3 +22,5 @@ jobs:
         run: uv sync
       - name: Lint with Ruff
         run: uv run ruff check
+      - name: Format with Ruff
+        run: uv run ruff format
