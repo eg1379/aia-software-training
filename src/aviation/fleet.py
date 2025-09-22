@@ -1,7 +1,7 @@
 """Modelling of the global fleet based on average passenger and aircraft data."""
 
 
-def passengers_per_day(passengers_per_year, days_per_year):
+def passengers_per_day(passengers_per_year: float, days_per_year: float) -> float:
     """The number of passengers per day globally.
 
     Args:
@@ -11,7 +11,9 @@ def passengers_per_day(passengers_per_year, days_per_year):
     return passengers_per_year / days_per_year
 
 
-def required_global_fleet(passengers_per_day, seats_per_aircraft, flights_per_aircraft_per_day):
+def required_global_fleet(
+    passengers_per_day: float, seats_per_aircraft: float, flights_per_aircraft_per_day: float
+) -> float:
     """The size of the required global fleet.
 
     Args:
