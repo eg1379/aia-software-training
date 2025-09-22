@@ -50,8 +50,8 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"analysis/*" = ["T201"]
-"tests/*" = ["D1"]
+"analysis/*" = ["INP001", "T201"]
+"tests/*" = ["D1", "INP001", "S101"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
