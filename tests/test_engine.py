@@ -1,14 +1,14 @@
 import typing
 
+import camia_engine as engine
 import pytest
 
 from aviation import transforms
-from aviation._engine import SystemsModel
 
 
 @pytest.fixture
-def systems_model() -> SystemsModel:
-    return SystemsModel(transforms)
+def systems_model() -> engine.SystemsModel:
+    return engine.SystemsModel(transforms)
 
 
 @pytest.mark.parametrize(
@@ -41,7 +41,7 @@ def systems_model() -> SystemsModel:
     ],
 )
 def test_transform_evaluation(
-    systems_model: SystemsModel,
+    systems_model: engine.SystemsModel,
     inputs: dict[str, typing.Any],
     output: str,
     expected: typing.Any,  # noqa: ANN401
