@@ -1,6 +1,9 @@
 """Modelling of the global fleet based on average passenger and aircraft data."""
 
+from aviation import _model as model
 
+
+@model.transform
 def passengers_per_day(passengers_per_year: float, days_per_year: float) -> float:
     """The number of passengers per day globally.
 
@@ -11,6 +14,7 @@ def passengers_per_day(passengers_per_year: float, days_per_year: float) -> floa
     return passengers_per_year / days_per_year
 
 
+@model.transform
 def required_global_fleet(
     passengers_per_day: float, seats_per_aircraft: float, flights_per_aircraft_per_day: float
 ) -> float:
