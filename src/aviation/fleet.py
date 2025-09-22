@@ -1,6 +1,6 @@
 """Modelling of the global fleet based on average passenger and aircraft data."""
 
-from aviation import _model as model
+import camia_model as model
 
 
 @model.transform
