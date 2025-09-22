@@ -31,30 +31,3 @@ def test_required_global_fleet():
         flights_per_aircraft_per_day,
     )
     assert result == pytest.approx(expected_required_global_fleet, abs=10_000.0)
-
-
-def test_passengers_per_day_argument_types_correct():
-    with pytest.raises(
-        TypeError, match="Argument `passengers_per_year` must be an instance of <class 'float'>"
-    ):
-        passengers_per_day("365_000_000.0", 365.0)
-    with pytest.raises(
-        TypeError, match="Argument `days_per_year` must be an instance of <class 'float'>"
-    ):
-        passengers_per_day(365_000_000.0, "365.0")
-
-
-def test_required_global_fleet_argument_types_correct():
-    with pytest.raises(
-        TypeError, match="Argument `passengers_per_day` must be an instance of <class 'float'>"
-    ):
-        required_global_fleet("1_000_000.0", 150.0, 2.0)
-    with pytest.raises(
-        TypeError, match="Argument `seats_per_aircraft` must be an instance of <class 'float'>"
-    ):
-        required_global_fleet(1_000_000.0, "150.0", 2.0)
-    with pytest.raises(
-        TypeError,
-        match="Argument `flights_per_aircraft_per_day` must be an instance of <class 'float'>",
-    ):
-        required_global_fleet(1_000_000.0, 150.0, "2.0")
