@@ -1,13 +1,15 @@
 """Analysis to determine the required size of the global fleet."""
 
 import camia_engine as engine
+from camia_model.units import day, year
 
 import aviation
+from aviation.units import aircraft, journey, passenger
 
-passengers_per_year = 5_000_000_000.0
-days_per_year = 365.0
-seats_per_aircraft = 200.0
-flights_per_aircraft_per_day = 3.0
+passengers_per_year = 5_000_000_000.0 * passenger / year
+days_per_year = 365.0 * day / year
+seats_per_aircraft = 200.0 * passenger / aircraft
+flights_per_aircraft_per_day = 3.0 * journey / (aircraft * day)
 
 inputs = {
     "passengers_per_year": passengers_per_year,

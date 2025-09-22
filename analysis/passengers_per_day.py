@@ -1,11 +1,13 @@
 """Analysis to determine the number of passengers per day globally."""
 
 import camia_engine as engine
+from camia_model.units import day, year
 
 import aviation
+from aviation.units import passenger
 
-passengers_per_year = 5_000_000_000.0
-days_per_year = 365.0
+passengers_per_year = 5_000_000_000.0 * passenger / year
+days_per_year = 365.0 * day / year
 
 inputs = {
     "days_per_year": days_per_year,
